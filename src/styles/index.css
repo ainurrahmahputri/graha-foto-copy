@@ -1,0 +1,9 @@
+/*
+  Tailwind v4 dipasang TANPA preflight (reset bawaan Tailwind dimatikan),
+  karena legacy.css sudah punya reset sendiri dan tampilan tidak boleh bergeser.
+  legacy.css masuk layer "components", jadi utility Tailwind selalu menang kalau dipakai bersama.
+*/
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "./legacy.css" layer(components);
