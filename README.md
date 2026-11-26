@@ -19,6 +19,7 @@ Isi repo ini hanya **front end**. Semua data lewat satu file, `src/api/client.js
 Butuh Node.js 20 atau lebih baru.
 
 ```bash
+cd frontend
 npm install
 npm run dev
 ```
@@ -30,7 +31,7 @@ Buka http://localhost:5173. Tanpa backend pun jalan: otomatis **mode demo** (dat
 
 ## Menyambung ke backend Express
 
-1. Salin `.env.example` jadi `.env`
+1. Salin `frontend/.env.example` jadi `frontend/.env`
 2. Isi alamat API: `VITE_API_URL=http://localhost:3000/api` (atau alamat Railway)
 3. Restart `npm run dev`
 
@@ -39,6 +40,7 @@ Begitu `VITE_API_URL` terisi, mode demo mati dan semua panggilan memakai endpoin
 ## Build dan deploy
 
 ```bash
+cd frontend
 npm run build      # hasil di dist/
 npm run preview    # coba hasil build
 ```
@@ -47,8 +49,10 @@ npm run preview    # coba hasil build
 
 ## Struktur
 
+Root repo berisi `frontend/` (React + Vite), `backend/` (Express, masih kerangka) dan `docs/`.
+
 ```
-src/
+frontend/src/
   main.jsx, App.jsx        titik masuk, kerangka layar
   context.jsx              state bersama: toko, draft pesanan, layar, toast
   api/
